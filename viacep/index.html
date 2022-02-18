@@ -20,37 +20,45 @@
     <title>DB-CEP</title>
   </head>
   <body>
-    <header class="navbar navbar-dark bg-warning">
+    <header class="db-header">
       <nav>
-        <h1>DBViaCEP</h1>
+        <h1>ViaCEP</h1>
         <div>contato</div>
       </nav>
     </header>
 
-    <main>
-      <section>
-        <form>
+    <main class="db-container">
+      <section class="db-container-form">
+        <form class="db-form">
           <label for="cep">CEP:</label>
           <input type="text" name="cep" id="cep" placeholder="CEP" class="form-control"/>
+          <div class="db-error">ocorreu um error</div>
           <label for="street">Logradouro:</label>
-          <input type="text" name="street" id="street" placeholder="Logradouro" class="form-control"/>
+          <input type="text" name="street" id="street" placeholder="Logradouro" class="form-control db-mar-top-20" disabled />
           <label for="numero">NUMERO:</label>
-          <input type="text" name="numero" id="numero" placeholder="Numero" class="form-control"/>
+          <input type="text" name="numero" id="numero" placeholder="Numero" class="form-control db-mar-top-20"/>
+          <div class="db-error">ocorreu um error</div>
           <label for="cidade">CIDADE:</label>
-          <input type="text" name="cidade" id="cidade" placeholder="Cidade" class="form-control"/>
+          <input type="text" name="cidade" id="cidade" placeholder="Cidade" class="form-control db-mar-top-20" disabled />
           <div class="buttons">
-            <button type="submit" class="btn btn-warning">SALVAR</button>
-            <button type="reset" class="btn btn-warning">LIMPAR</button>
+            <button type="submit">SALVAR</button>
+            <button type="reset">LIMPAR</button>
           </div>
         </form>
       </section>
 
-      <section>
+      <section class="db-container-result">
           <div>
               <h2>São Paulo</h2>
               <p>Rua dos Jardins, 720</p>
               <span>12054-234</span>
           </div>
+
+          <div>
+            <h2>São Paulo</h2>
+            <p>Rua dos Jardins, 720</p>
+            <span>12054-234</span>
+        </div>
       </section>
     </main>
   </body>

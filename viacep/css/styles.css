@@ -1,6 +1,170 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+.db-header {
+  width: 100%;
+  height: 80px;
+  background: #ff8400;
+  padding: 0px 20px;
+}
+
+.db-header nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+.db-header h1 {
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.db-header div {
+  font-size: 15px;
+}
+
+.db-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 10px;
+}
+
+.db-container-form {
+  width: 100%;
+  background-color: #333333;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.db-form label {
+  display: none;
+}
+
+.db-form input {
+  height: 40px;
+}
+
+.db-form input::placeholder {
+  font-size: 14px;
+  color: #c9c9c9;
+}
+
+.db-error {
+  display: none;
+  color: rgb(226, 59, 59);
+}
+
+.db-mar-top-20 {
+  margin-top: 20px;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.buttons button {
+  width: 45%;
+  height: 40px;
+  font-size: 14px;
+  line-height: 19px;
+  color: #ffffff;
+  background: #ff8400;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.db-container-result {
+  width: 100%;
+  margin: 40px 0px;
+}
+
+.db-container-result div {
+  width: 100%;
+  height: 100px;
+  background: #333333;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 20px;
+ 
+}
+
+.db-container-result div h2, p, span {
+    margin: 0px;
+  }
+
+.db-container-result div h2 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #ff8400;
+ 
+}
+
+.db-container-result div p {
+  font-size: 14px;
+  line-height: 19px;
+  color: #ffffff;
+
+}
+
+.db-container-result div span {
+  font-size: 12px;
+  line-height: 16px;
+  color: #8f8f8f;
+  margin: 0px;
+}
+
+@media screen and (min-width: 576px) {
+  .db-container-form {
+    width: 500px;
+    padding: 20px;
+  }
+
+  .db-form input {
+    height: 50px;
+  }
+
+  .buttons button {
+    width: 40%;
+    height: 50px;
+    font-size: 15px;
+  }
+
+  .db-container-result{
+    width: 570px;
+    
+   
+  }
+  
+}
+
+@media screen and (min-width: 768px) {
+  .db-header {
+    padding: 0px 40px;
+  }
+
+  .db-header h1 {
+    font-size: 36px;
+  }
+
+  .db-header div {
+    font-size: 18px;
+  }
 }
