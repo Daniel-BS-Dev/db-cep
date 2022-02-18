@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>DB-CEP</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header class="navbar navbar-dark bg-warning">
+      <nav>
+        <h1>DBViaCEP</h1>
+        <div>contato</div>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <form>
+          <label for="cep">CEP:</label>
+          <input type="text" name="cep" id="cep" placeholder="CEP" class="form-control"/>
+          <label for="street">Logradouro:</label>
+          <input type="text" name="street" id="street" placeholder="Logradouro" class="form-control"/>
+          <label for="numero">NUMERO:</label>
+          <input type="text" name="numero" id="numero" placeholder="Numero" class="form-control"/>
+          <label for="cidade">CIDADE:</label>
+          <input type="text" name="cidade" id="cidade" placeholder="Cidade" class="form-control"/>
+          <div class="buttons">
+            <button type="submit" class="btn btn-warning">SALVAR</button>
+            <button type="reset" class="btn btn-warning">LIMPAR</button>
+          </div>
+        </form>
+      </section>
+
+      <section>
+          <div>
+              <h2>São Paulo</h2>
+              <p>Rua dos Jardins, 720</p>
+              <span>12054-234</span>
+          </div>
+      </section>
+    </main>
+  </body>
 </html>
