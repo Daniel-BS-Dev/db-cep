@@ -1,6 +1,6 @@
-import findByCep from "./addressService.js";
+import { findByCep, getErrors } from "./addressService.js";
+import { addCard } from "./controller-list.js";
 import Address from "./models.js";
-import { getJson } from "./request-service.js";
 
 // funções construtura
 function State() {
@@ -39,11 +39,9 @@ export function init() {
   state.number.addEventListener("keyup", handleKeyupNumber);
 }
 
-
 // adicionando o numero
-function handleKeyupNumber(event){
-    state.address.number = event.target.value;
-  
+function handleKeyupNumber(event) {
+  state.address.number = event.target.value;
 }
 
 // mensagem de error
@@ -72,6 +70,8 @@ function formClear() {
   state.street.value = "";
   state.number.value = "";
 
+  state.address = new Address();
+
   checkIsEmpty("cep", "");
   checkIsEmpty("number", "");
 
@@ -88,7 +88,6 @@ async function handleCheckCepExist(event) {
     state.address = address;
     checkIsEmpty("cep", "");
     state.number.focus();
-   
   } catch (e) {
     state.city.value = "";
     state.street.value = "";
@@ -99,5 +98,16 @@ async function handleCheckCepExist(event) {
 
 async function handleOnClick(event) {
   event.preventDefault();
-  console.log(state.address);
+
+  const errors = getErrors(state.address);
+  const keys = Object.keys(errors);
+
+  if (keys.length > 0) {
+    keys.forEach(key => {
+    checkIsEmpty(key, errors[key]);
+    });
+  } else {
+    addCard(state.address);
+    formClear();
+  }
 }
